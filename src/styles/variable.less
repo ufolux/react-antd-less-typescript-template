@@ -1,0 +1,52 @@
+@app-border-radius: 10px;
+@app-space-xs: 4px;
+@app-space-s: 10px;
+@app-space-m: 20px;
+@app-space-l: 30px;
+@app-header-height: 48px;
+
+@app-border: {
+  border: 1px solid lightgrey;
+};
+
+@app-card-shadow: {
+  box-shadow: lightgrey 0 0 10px;
+};
+
+@app-card-shadow-hover: {
+  box-shadow: grey 0 0 10px;
+};
+
+@app-flex-c: {
+  display: flex;
+  flex-direction: column;
+};
+
+@app-flex-r: {
+  display: flex;
+  flex-direction: row;
+};
+
+@app-flex-center-r: {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+};
+
+@app-flex-center-c: {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+};
+
+@card: {
+  @app-border();
+
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: @app-border-radius;
+  box-shadow: lightgrey 0 0 10px;
+};

@@ -1,0 +1,10 @@
+/lambda/
+/scripts
+/config
+.history
+public
+dist
+mock
+node_modules
+craco.config.js
+

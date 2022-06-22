@@ -1,9 +1,9 @@
 {
-  "name": "passioncy-creator",
+  "name": "template",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve -c ./config/webpack.config.js --env development",
     "build": "webpack -c ./config/webpack.config.js --env production",
+    "format": "prettier-standard --format",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier && npm run tsc",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ./src",
@@ -11,10 +11,14 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier-standard -c --write \"src/**/*\" --end-of-line auto",
     "lint:style": "stylelint --fix \"src/**/*.less\"",
-    "format": "prettier-standard --format",
     "precommit": "lint-staged",
     "prepare": "husky install",
-    "prettier": "prettier-standard -c --write \"src/**/*\""
+    "prettier": "prettier-standard -c --write \"src/**/*\"",
+    "start": "webpack serve -c ./config/webpack.config.js --env development"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint",
+    "**/*.{js,jsx,ts,tsx}": "yarn lint-staged:js"
   },
   "dependencies": {
     "antd": "^4.21.3",
@@ -85,13 +89,7 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
-    "webpack-merge": "^5.8.0"
-  },
-  "lint-staged": {
-    "**/*.less": "stylelint",
-    "**/*.{js,jsx,ts,tsx}": "yarn lint-staged:js",
-    "**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "prettier --write"
-    ]
+    "webpack-merge": "^5.8.0",
+    "webpackbar": "^5.0.2"
   }
 }

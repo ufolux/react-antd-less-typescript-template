@@ -20,7 +20,8 @@ module.exports = {
       rules: {
         'no-undef': 'off',
         'multiline-ternary': 'off',
-        'comma-dangle': 'off'
+        'comma-dangle': 'off',
+        'react/react-in-jsx-scope': 'off'
       }
     }
   ],

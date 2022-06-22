@@ -12,7 +12,7 @@ const RoutePaths = {
   },
 
   nav3: {
-    $: '/nav3',
+    $: '/nav3'
   }
 }
 

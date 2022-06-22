@@ -2,8 +2,7 @@
  * Created by Richard Lu on 6/16/22
  */
 
-import type React from 'react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Redirect: React.FC<{ to: string }> = ({ to }) => {

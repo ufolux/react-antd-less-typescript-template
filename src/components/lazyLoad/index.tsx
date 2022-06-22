@@ -12,14 +12,14 @@ const LazyLoad = (path: string) => {
   const loading = () => {
     return (
       <div className={styles.loading}>
-        <Spin size="large" />
+        <Spin size='large' />
       </div>
     )
   }
 
   return (
     <Suspense fallback={loading()}>
-      {/*<Component />*/}
+      {/* <Component /> */}
       <Component />
     </Suspense>
   )

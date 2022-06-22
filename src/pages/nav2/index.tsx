@@ -3,13 +3,13 @@
  */
 
 import React from 'react'
-import {Outlet} from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Nav2: React.FC = () => {
   return (
     <div>
       <div>nav2</div>
-      <Outlet/>
+      <Outlet />
     </div>
   )
 }

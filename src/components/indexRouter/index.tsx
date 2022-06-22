@@ -1,13 +1,13 @@
 /**
  * Created by Richard Lu on 6/16/22
  */
-
+import React from 'react'
 import Authentication from '@/components/authentication'
 import LazyLoad from '@/components/lazyLoad'
 import BasicLayout from '@/layouts/basicLayout'
 import { useRoutes } from 'react-router-dom'
 
-export default function IndexRouter() {
+export default function IndexRouter () {
   return useRoutes([
     {
       path: '/',
@@ -32,9 +32,9 @@ export default function IndexRouter() {
                 {
                   path: 'nav21',
                   element: LazyLoad('pages/nav2/pages/nav21')
-                },
+                }
               ]
-            },
+            }
           ]
         },
         {

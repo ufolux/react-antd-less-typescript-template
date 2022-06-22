@@ -1,7 +1,8 @@
+import React from 'react'
 import IndexRouter from '@/components/indexRouter'
 import './App.less'
 
-function App() {
+function App () {
   return <IndexRouter />
 }
 

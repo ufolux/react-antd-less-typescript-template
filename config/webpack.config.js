@@ -25,6 +25,7 @@ const ForkTsCheckerWebpackPlugin =
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
     : require('react-dev-utils/ForkTsCheckerWebpackPlugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const WebpackBar = require('webpackbar');
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash')
 
@@ -68,6 +69,13 @@ const swSrc = paths.swSrc
 
 // style files regexes
 const stylesRegex = /\.(css|less)$/
+
+const progressPlugin = new WebpackBar({
+  color: "#85d",
+  basic: true,
+  profile:false,
+})
+
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -311,6 +319,7 @@ module.exports = function (webpackEnv) {
         .map(ext => `.${ext}`)
         .filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
+        '@': path.resolve(__dirname, '../src'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
@@ -528,6 +537,7 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean)
     },
     plugins: [
+      progressPlugin,
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(

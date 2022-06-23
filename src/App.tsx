@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import styles from './App.less';
-import {Button} from 'antd'
+import React from "react";
+import logo from "./logo.svg";
+import styles from "@/App.less";
+import { Button } from "antd";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Button type='primary' shape='round'>
+        <Button type="primary" shape="round">
           Test
         </Button>
         <a

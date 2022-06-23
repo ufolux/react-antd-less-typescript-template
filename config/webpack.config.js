@@ -45,6 +45,8 @@ const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
   paths: [babelRuntimeEntry]
 })
 
+const theme = require('./theme.config.js')
+
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false'
@@ -185,7 +187,7 @@ module.exports = function (webpackEnv) {
           options: {
             sourceMap: true,
             lessOptions: {
-              modifyVars: { '@primary-color': '#1DA57A' },
+              modifyVars: theme,
               javascriptEnabled: true
             }
           }
